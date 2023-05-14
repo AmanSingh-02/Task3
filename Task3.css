@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    height: 100vh;
+    background-image: url('https://images.pexels.com/photos/2096622/pexels-photo-2096622.jpeg?auto=compress&cs=tinysrgb&w=1600');
+   background-repeat:inherit;
+}
+
+
+.text1
+{
+    display:inline-block;
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Aleo';
+    border: 1px solid rgb(255, 102, 0);
+    margin-left:42%;
+    padding: 23px;
+    margin-top:12px;
+    text-align: center;
+    background-color:rgb(38, 255, 0);
+    border-radius: 40%;
+}
+.container
+{
+    position: relative;
+    max-width: 800px;
+    padding: 10px;
+    margin: 50px auto;
+}
+.addTask
+{
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+}
+.addTask > input[type="text"]
+{
+    width: 90%;
+    color: rgb(211, 230, 49);
+
+    border:none;
+    border-bottom: 2px solid rgb(8, 136, 175);
+    background: none;
+    padding: 10px;
+    font-size: 22px;
+    outline: none;
+}
+.addTask button
+{
+    margin: 0 10px;
+    background:rgb(134, 202, 244);
+    color: black;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 50%; 
+    cursor: pointer;
+}
+.notCompleted, .Completed
+{
+    margin: 5px 0;
+    padding: 20px;
+}
+h3
+{
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(31, 23, 23);
+
+}
+ol
+{
+    list-style: none;
+    counter-reset: my-counter;
+}
+ol li
+{
+    width: 100%;
+    padding: 18px;
+    margin: 5px 0;
+    background: red;
+    font-size: 22px;
+    counter-increment: my-counter;
+    border-radius: 20px;
+}
+ol.Completed li
+{
+    background: #00ff62;
+}
+ol li::before
+{
+    content: counter(my-counter);
+    background: green;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 2rem;
+    text-align: center;
+    color: #fff;
+    margin-right: 0.5rem;
+}
+li button
+{
+    float: right;
+    padding: 5px;
+    font-size: 28px;
+    line-height: 28px;
+    margin-right: 15px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}
+
+::placeholder{
+
+    color:yellow;
+
+    opacity: 1;
+}
